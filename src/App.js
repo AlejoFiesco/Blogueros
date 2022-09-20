@@ -1,10 +1,20 @@
-import './App.css';
+import { Routes, Route } from "react-router-dom";
+import MotionRoute from "./layout/motion-route";
+import LogIn from "./components/login/log-in";
+import "./App.css";
 
 function App() {
   return (
-    <div className="App">
-      
-    </div>
+    <Routes>
+      <Route
+        path="/"
+        element={
+          <MotionRoute>
+            <LogIn />
+          </MotionRoute>
+        }
+      />
+    </Routes>
   );
 }
 
