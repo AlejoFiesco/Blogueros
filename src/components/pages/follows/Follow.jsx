@@ -13,9 +13,11 @@ export const Follow = ({name, image}) => {
 
   return (
 
-    <div className='container-follow row align-items-center mb-2'>
-        <div className='container-img  col-2'>
-            <img src={image} alt='imgProfile' className='rounded-circle'/>
+    <div className='container-follow row  mb-2'>
+        <div className='container-img  col-2 d-flex align-items-center'>
+            <div>
+                <img src={image} alt='imgProfile' className='profile-image rounded-circle'/>
+            </div>
         </div>
 
         <div className='col p-2'>
@@ -23,20 +25,20 @@ export const Follow = ({name, image}) => {
                 <h5>{name}</h5>
             </div> 
 
-            <div className='container-links d-flex'>
+            <div className='container-btn d-flex'>
                 {
                     !follow 
-                    ? <div className='btn-follow' onClick={onUnfollow}><span>Unfollow</span></div> 
-                    : <div className='btn-follow' onClick={onFollow}><span>Follow</span></div>
+                    ? <div className='btn-follow' onClick={onUnfollow}><span role='button'>Unfollow</span></div> 
+                    : <div className='btn-follow' onClick={onFollow}><span role='button'>Follow</span></div>
                 
                 }              
             </div>
         </div>
 
-        <div className='col-2 d-flex align-items-center'>
-            <p>
-            <i className="fa-light fa-bell"></i>
-            </p> 
+        <div className='container-icon col-2 d-flex align-items-center'>
+            <div>
+                <i class="fa-regular fa-bell"></i>
+            </div> 
         </div>
     </div>
   )
