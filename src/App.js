@@ -6,16 +6,10 @@ import "./App.css";
 function App() {
   return (
     <Routes>
-      <Route
-        path="/"
-        element={
-          <MotionRoute>
-            <LogIn />
-          </MotionRoute>
-        }
-      />
+      <Route path="/" element={<MotionRoute />}>
+        <Route index element={<LogIn />} />
+      </Route>
     </Routes>
   );
 }
-
 export default App;
