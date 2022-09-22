@@ -1,0 +1,23 @@
+.container {
+    background-color: #22272e;
+    height: 100vh;
+}
+.container-btn .btn-follow {
+    color: #539BF5;
+}
+.container-follow{
+    border: 2px solid #9B9B9B;
+    border-radius: 10px;
+}
+
+.container-icon  {
+    color: aliceblue;
+    font-size: 25px;
+}
+.container-img img {
+    height: 40px;
+    width: 40px;
+}
+.container-name {
+    color: #9B9B9B;
+}
