@@ -7,10 +7,11 @@ import { Follows } from "./components/pages/follows/Follows";
 function App() {
   return (
     <Routes>
-      <Route path="/" element={<MotionRoute />}>
-        <Route index element={<LogIn />} />
-        <Route path="follows" element={<Follows />} />
-      </Route>
+      <Route path="/" element={<MotionRoute element="login"/>} />
+      <Route path="/post" element={<MotionRoute element="post"/>} />
+      <Route path="/newpost" element={<MotionRoute element="newpost"/>} />
+      <Route index element={<LogIn />} />
+      <Route path="follows" element={<Follows />} />
     </Routes>
   );
 }
