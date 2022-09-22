@@ -1,0 +1,14 @@
+.header {
+    height: 70px;
+    width: 100%;
+    background-color: #22272e;
+}
+.header-container {
+    
+    align-items: center;
+    height: 100%;
+    color: #9B9B9B;
+}
+.header-container .container-menu {
+    font-size: 30px;
+}

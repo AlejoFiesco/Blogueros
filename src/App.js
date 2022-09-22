@@ -6,12 +6,14 @@ import { Follows } from "./components/pages/follows/Follows";
 
 function App() {
   return (
-    <Routes>
-      <Route path="/" element={<MotionRoute />}>
-        <Route index element={<LogIn />} />
-        <Route path="follows" element={<Follows />} />
-      </Route>
-    </Routes>
+   
+      <Routes>
+        <Route path="/" element={<MotionRoute />}>
+          <Route index element={<LogIn />} />
+          <Route path="follows" element={<Follows />} />
+        </Route>
+      </Routes>
+    
   );
 }
 export default App;
