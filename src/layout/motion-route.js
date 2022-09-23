@@ -3,13 +3,15 @@ import { Outlet } from "react-router-dom";
 import { NewPost } from "../components/posts/new-post";
 import { Post } from "../components/posts/post";
 
-const MotionRoute = ( { element } ) => {
+const MotionRoute = ( props ) => {
 
+  let post = props.post;
+  console.log(post);
   const setElement = () => {
     let elemento = < Outlet />;
-    switch(element){
+    switch(props.element){
       case "post": 
-        elemento = < Post />;
+        elemento = < Post post={ post }/>;
         break;
       case "newpost":
         elemento = < NewPost />;

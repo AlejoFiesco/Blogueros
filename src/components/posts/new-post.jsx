@@ -1,5 +1,4 @@
 import './post.styles.css';
-import { useState } from 'react';
 import { useFormik } from 'formik';
 import * as Yup from 'yup';
 
@@ -9,9 +8,11 @@ export const NewPost = () => {
     const initialValues = {
       title: '',
       content: '',
-      visibility: '',
+      visibility: 'public',
       time: ''
     };
+
+    const visibilities = ['public', 'friends','private'];
 
     const validationMessages = {
       required: 'Must fill this field'
@@ -30,13 +31,22 @@ export const NewPost = () => {
       console.log('submitted');
     };
 
+    const changeVisibility = () => {
+      if(values.visibility === visibilities.at(-1)){
+        setFieldValue("visibility", visibilities[0]);
+        return;
+      }
+      let i = visibilities.indexOf(values.visibility) + 1;
+      setFieldValue("visibility", visibilities[i])
+    };
+
     const formik = useFormik({ initialValues, onSubmit, validationSchema });
-    const { handleChange, handleBlur, handleSubmit, values, errors, touched } = formik;
+    const { handleChange, handleBlur, handleSubmit, setFieldValue, values, errors, touched } = formik;
 
     return (
       <div className='post letra-clara'>
-          <h1 className='container-title'>New post</h1>
-          <form onSubmit={handleSubmit}>
+          {/*<h1 className='container-title'>New post</h1>*/}
+          <form className='inner-post' onSubmit={handleSubmit}>
             <input 
               type="text" 
               name="title" 
@@ -64,6 +74,8 @@ export const NewPost = () => {
               <span>{ values.content.length +" / "+ maxLength }</span>
             </div>
             {errors.content && touched.content && <span className='notification'>{ errors.content }</span>}
+
+            <span className="select-visibility" onClick={ changeVisibility }> { values.visibility } <i className="fa-solid fa-rotate"></i> </span>
 
             <button type="submit">Post!</button>
           </form>
