@@ -8,6 +8,7 @@
     border-radius: var(--global-radius);
     padding: 20px;
     box-sizing: border-box;
+    position: relative;
 }
 
 .title, .content{
@@ -21,14 +22,14 @@
     font-size: larger;
 }
 
-.post > form > .description{
+.post > .inner-post > .description{
     border-top: var(--global-border);
     padding-top: 10px;
     position: relative;
     width: 100%;
 }
 
-.post > form > .description > span{
+.post > .inner-post > .description > span{
     position: absolute;
     right: 10px;
     bottom: 10px;
@@ -41,26 +42,26 @@
     font-size: large;
 }
 
-.post form{
+.post .inner-post{
     display: flex;
     flex-direction: column;
     justify-content: center;
     gap: 5px;
 }
 
-.post form input, .post form textarea{
-    border: 2px solid #9b9b9b;
-    border-radius: 10px;
+.post .inner-post input, .post .inner-post textarea{
+    padding: 4px;
+    border-radius: var(--global-radius);
     transition: 0.15s ease-in-out;
 }
 
-.post form input:focus, .post form textarea:focus{
-border-color: var(--global-highlight-green-color);
-  outline: 0;
-  box-shadow: 0 0 0 0.2rem rgba(51, 185, 58, 0.25);
+.post .inner-post input:focus, .post .inner-post textarea:focus{
+    border-color: var(--global-highlight-green-color);
+    outline: 0;
+    box-shadow: 0 0 0 0.2rem rgba(51, 185, 58, 0.25);
 }
 
-.post form button{
+.post .inner-post button{
     padding: 10px 12px;
     color: var(--global-background-color);
     background-color: var(--global-dark-green-color);
@@ -69,7 +70,7 @@ border-color: var(--global-highlight-green-color);
     transition: 0.35s ease-in-out;
 }
 
-.post form button:hover {
+.post .inner-post button:hover {
     background-color: var(--global-highlight-green-color);
     color: var(--global-input-color);
     outline: 0;
@@ -80,12 +81,82 @@ border-color: var(--global-highlight-green-color);
     text-align: center;
 }
 
+.post > .enter-post{
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    opacity: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    right: -15px;
+    background-color: var(--global-font-color);
+    color: var(--global-darkest-background-color);
+    text-align: center;
+    border-radius: 50%;
+    font-size: larger;
+    transition: opacity .2;
+}
+
+.post:hover > .enter-post{
+    transition: .2s;
+    opacity: 1;
+}
+
+.post:hover > .enter-post i{
+    animation: showup 1s linear infinite;
+}
+
+@keyframes showup {
+    from{
+        opacity: 1;
+        transform: translateX(0px);
+    }
+
+    to{
+        opacity: 0;
+        transform: translateX(10px);
+    }
+}
+
 .letra-clara{
     color: var(--global-font-color);
 }
 
 .letra-clara > *{
     color: inherit;
+}
+
+.inner-post .select-visibility{
+    display: flex;
+    justify-content: space-between;
+    width: 100px;
+    padding: 10px;
+    cursor: pointer;
+    transition: .5s;
+}
+
+.inner-post .select-visibility:hover{
+    background-color: var(--global-input-color);
+    border-radius: var(--global-radius);
+}
+
+.inner-post .select-visibility:hover i{
+    animation: rotate .4s linear infinite;
+}
+
+@keyframes rotate {
+    from{
+        rotate: 0deg;
+    }
+
+    50%{
+        rotate: 35deg;
+    }
+}
+
+.inner-post .select-visibility :first-child{
+    line-height: 25px;
 }
 
 @media screen and (min-width: 768px) {
