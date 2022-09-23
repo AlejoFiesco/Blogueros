@@ -22,7 +22,16 @@
     font-size: larger;
 }
 
-.post > .inner-post > .description{
+.inner-post > .post-header{
+    font-size: larger;
+    display: flex;
+    justify-content: space-between;
+}
+
+.post > .inner-post > .description {
+    position: relative;
+}
+.post > .inner-post > .description > p{
     border-top: var(--global-border);
     padding-top: 10px;
     position: relative;
@@ -38,7 +47,7 @@
 
 .content{
     resize: none;
-    height: min-content;
+    min-height: 150px;
     font-size: large;
 }
 
@@ -95,6 +104,7 @@
     text-align: center;
     border-radius: 50%;
     font-size: larger;
+    cursor: pointer;;
     transition: opacity .2;
 }
 
@@ -125,6 +135,11 @@
 
 .letra-clara > *{
     color: inherit;
+}
+
+.inner-post > .post-footer{
+    display: flex;
+    justify-content: space-between;
 }
 
 .inner-post .select-visibility{

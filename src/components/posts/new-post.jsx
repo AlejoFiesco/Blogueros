@@ -75,7 +75,7 @@ export const NewPost = () => {
             </div>
             {errors.content && touched.content && <span className='notification'>{ errors.content }</span>}
 
-            <span className="select-visibility" onClick={ changeVisibility }> { values.visibility } <i class="fa-solid fa-rotate"></i> </span>
+            <span className="select-visibility" onClick={ changeVisibility }> { values.visibility } <i className="fa-solid fa-rotate"></i> </span>
 
             <button type="submit">Post!</button>
           </form>
