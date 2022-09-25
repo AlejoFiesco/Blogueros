@@ -5,24 +5,13 @@
   align-items: center;
   width: 100%;
   height: 100vh;
-  background-color: #22272e;
+  background-color: var(--global-background-color);
 }
 h1,
 p {
-  color: #d1d1d1;
+  color: var(--global-font-color);
 }
 /* class bootstrap */
-
-.row {
-  display: flex;
-  flex-wrap: wrap;
-  margin-right: -15px;
-  margin-left: -15px;
-}
-.col-md-6 {
-  flex: 0 0 50%;
-  max-width: 50%;
-}
 
 .login-form {
   margin: 50px auto;
@@ -30,6 +19,7 @@ p {
 }
 .login-form > form {
   width: 100%;
+  gap: 15px;
 }
 
 .form-group {
@@ -38,7 +28,7 @@ p {
 .form-group > label {
   margin-bottom: 15px;
   display: block;
-  color: #d1d1d1;
+  color: var(--global-background-color);
   margin-left: 10px;
 }
 
@@ -47,8 +37,8 @@ p {
   padding: 10px 12px;
   font-size: 16px;
   font-weight: 400;
-  color: #495057;
-  background-color: #191b1e;
+  color: var(--global-input-color);
+  background-color: var(--global-darkest-background-color);
   background-clip: padding-box;
   border: 2px solid #9b9b9b;
   border-radius: 10px;
@@ -56,8 +46,7 @@ p {
 }
 
 .input-control:focus {
-  color: #495057;
-  border-color: #33b93a;
+  border-color: var(--global-highlight-green-color);
   outline: 0;
   box-shadow: 0 0 0 0.2rem rgba(51, 185, 58, 0.25);
 }
@@ -65,20 +54,20 @@ p {
 .btn {
   width: 100%;
   padding: 10px 12px;
-  margin-button: 15px;
+  margin-bottom: 15px;
   font-size: 16px;
   font-weight: 500;
-  color: #d1d1d1;
-  background-color: #307434;
+  color: var(--global-background-color);
+  background-color: var(--global-dark-green-color);
   background-clip: padding-box;
   border: 1px transparent;
-  border-radius: 10px;
+  border-radius: var(--global-radius);
   transition: 0.35s ease-in-out;
 }
 
 .btn:hover {
-  background-color: #33b93a;
-  color: #495057;
+  background-color: var(--global-highlight-green-color);
+  color: var(--global-input-color);
   outline: 0;
   box-shadow: 0 0 0 0.2rem rgba(51, 185, 58, 0.25);
 }
@@ -90,15 +79,16 @@ p {
 }
 
 .p-link {
-  color: #d1d1d1;
+  color: var(--global-font-color);
   font-size: 12px;
   text-decoration: none;
 }
 
 .a-link {
   text-decoration: none;
-  color: #539bf5;
+  color: var(--global-link-color);
 }
 .a-link:hover {
+  color: var(--global-link-color);;
   text-decoration: underline;
 }

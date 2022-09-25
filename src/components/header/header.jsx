@@ -1,14 +1,19 @@
 import React from 'react'
 
+
+
 import './header.css';
 
-export const Header = () => {
+export const Header = ({handleShowMenu}) => {
+
+  
+
   return (
       <header className='header'>
         <div className='header-container row ps-2 pe-2 '>
             
             <div className='container-menu col-2 text-center'>
-              <span  role='button' onClick={()=>alert('desplegando menu')}>
+              <span  role='button' onClick={handleShowMenu}>
                 <i className="fa-solid fa-bars"></i>
               </span>
             </div>
