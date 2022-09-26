@@ -1,6 +1,6 @@
 import { Routes, Route } from "react-router-dom";
 import MotionRoute from "./layout/motion-route";
-import LogIn from "./components/login/log-in";
+import LogIn from "./components/pages/login/log-in";
 import "./App.css";
 import { Follows } from "./components/pages/follows/Follows";
 
