@@ -1,0 +1,42 @@
+.container-profile{
+    height: 320px;
+    margin: 0 auto;
+    padding-top: 10px;
+    width: 85%;
+}
+.container-profile .container-profile-img {
+    display: flex;
+    height: 180px;
+    justify-content: center;
+    margin-bottom: 5px;
+    width: 100%;
+}
+.container-profile .container-profile-img img {
+    border-radius: var(--global-radius);
+    height: 170px;
+    width: 170px;
+}
+.container-profile .container-profile-info {
+    border: var(--global-border);
+    border-radius: var(--global-radius);
+    margin: 0 auto;
+    width: 90%;
+    text-align: center;
+}
+.container-profile-info .container-list  ul {   
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+    padding: 0;
+}
+
+.container-list  ul li > div{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+}
+.container-list  ul li > div > span{
+    margin-right: 5px;
+    color: var(--global-link-color);
+}

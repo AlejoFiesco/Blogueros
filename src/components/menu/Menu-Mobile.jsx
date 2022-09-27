@@ -17,7 +17,7 @@ export const MenuMobile = () => {
                 </li>
                 <li>
                     <i className="fa-solid fa-sheet-plastic"></i>
-                   <Link>
+                   <Link to='/post'>
                         My post
                    </Link> 
                 </li>
@@ -29,13 +29,13 @@ export const MenuMobile = () => {
                 </li>
                 <li>
                     <i className="fa-solid fa-star"></i>
-                    <Link>
+                    <Link to='/follows'>
                         Follow
                     </Link>
                 </li>
                 <li>
                     <i className="fa-solid fa-circle-user"></i>
-                    <Link>
+                    <Link to='/profile'>
                         Profile
                     </Link>
                 </li>

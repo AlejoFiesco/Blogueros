@@ -16,7 +16,6 @@ function RouterApp() {
             <Route index element={<LogIn />} />
 
             {/* rutas privadas */}
-
             <Route path='/*' element={
                 <DashboarRouter />
             }/>
