@@ -12,7 +12,7 @@ export const Follow = ({name, image}) => {
     }
 
   return (
-
+    
     <div className='container-follow row  mb-2'>
         <div className='container-img  col-2 d-flex align-items-center'>
             <div>
@@ -37,7 +37,7 @@ export const Follow = ({name, image}) => {
 
         <div className='container-icon col-2 d-flex align-items-center'>
             <div>
-                <i class="fa-regular fa-bell"></i>
+                <i className="fa-regular fa-bell"></i>
             </div> 
         </div>
     </div>
