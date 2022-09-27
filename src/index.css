@@ -1,8 +1,8 @@
-:root{
+:root {
   --global-background-color: #22272e;
   --global-darkest-background-color: #191b1e;
   --global-font-color: #d1d1d1;
-  --global-input-color: #495057;
+  --global-input-color: #9b9b9b;
   --global-highlight-green-color: #33b93a;
   --global-dark-green-color: #307434;
   --global-link-color: #539bf5;
@@ -16,21 +16,21 @@
 
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-color: var(--global-background-color);
 }
 
-.notification{
+.notification {
   margin-top: 0px;
   text-align: center;
   color: var(--global-alert-color);
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }

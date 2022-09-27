@@ -20,9 +20,7 @@ export default function FormLogIn() {
           placeholder="Your password ..."
         />
       </div>
-      <button type="submit" className="btn btn-primary">
-        Log In
-      </button>
+      <input type="submit" className="btn btn-primary" value="Login" />
     </form>
   );
 }
