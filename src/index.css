@@ -22,15 +22,5 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-color: var(--global-background-color);
-}
-
-.notification {
-  margin-top: 0px;
-  text-align: center;
-  color: var(--global-alert-color);
-}
-
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
+  color: var(--global-font-color);
 }

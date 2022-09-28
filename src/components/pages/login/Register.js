@@ -2,7 +2,7 @@
 // import * as Yup from "yup";
 // import { TextInput } from "../../textInput/TextInput";
 import { useState } from "react";
-import { useAuth } from "../../../hooks/useContext";
+import { useAuth } from "../../../hooks/useAuth";
 import { useNavigate } from "react-router-dom";
 
 export const SignupForm = () => {
@@ -15,6 +15,7 @@ export const SignupForm = () => {
   const navigate = useNavigate();
 
   const { signup } = useAuth();
+
   const handleChange = ({ target: { name, value } }) => {
     setUser({ ...user, [name]: value });
   };
@@ -27,7 +28,7 @@ export const SignupForm = () => {
       return;
     }
     await signup(email, password);
-    navigate("/");
+    navigate("/user");
   };
   return (
     <>
