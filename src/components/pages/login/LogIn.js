@@ -1,10 +1,8 @@
-import { useAuth } from "../../../hooks/useContext";
+// import { useAuth } from "../../../hooks/useContext";
 import FormLogIn from "../../formLogin/form-login";
 import "./login.css";
 
 const LogIn = () => {
-  const { user } = useAuth();
-  console.log(user);
   return (
     <div>
       <div className="container-log">
