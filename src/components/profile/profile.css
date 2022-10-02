@@ -36,6 +36,9 @@
     justify-content: space-between;
     
 }
+.container-list  ul li > div {
+    color: var( --global-font-color);
+}
 .container-list  ul li > div > span{
     margin-right: 5px;
     color: var(--global-link-color);

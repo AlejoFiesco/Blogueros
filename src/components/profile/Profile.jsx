@@ -18,13 +18,13 @@ export const Profile = () => {
                         </li>
                         <li>
                             <div>
-                                <span>10</span>  in a row
+                                <span>10</span>  In a row
                             </div>
                         </li>
                         <li>
                             <div>
                                 <span>10</span> Post
-                            </div>
+                            </div> 
                         </li>
                     </ul>
                 </div>

@@ -21,7 +21,7 @@ export const DashboarRouter = () => {
       const [show, setShow] = useState(false);
 
       const handleShowMenu = () => {
-        setShow (!show)
+        setShow (!show) 
       }
 
   return (
@@ -29,7 +29,7 @@ export const DashboarRouter = () => {
         <Header handleShowMenu={handleShowMenu}/>
         <div>
           {
-              show && <MenuMobile />
+              show && <MenuMobile handleShowMenu={handleShowMenu} />
           }
             <Routes>
                 <Route path="post" element={<MotionRoute element="post" post={ post }/>} />
