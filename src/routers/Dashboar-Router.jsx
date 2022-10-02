@@ -4,6 +4,7 @@ import MotionRoute from '../layout/motion-route';
 import { Header } from '../components/header/Header'
 import { Follows } from '../components/pages/follows/Follows';
 import { MenuMobile } from '../components/menu/Menu-Mobile';
+import { Profile } from '../components/profile/Profile';
 
 
 export const DashboarRouter = () => {
@@ -20,7 +21,7 @@ export const DashboarRouter = () => {
       const [show, setShow] = useState(false);
 
       const handleShowMenu = () => {
-        setShow (!show)
+        setShow (!show) 
       }
 
   return (
@@ -28,12 +29,13 @@ export const DashboarRouter = () => {
         <Header handleShowMenu={handleShowMenu}/>
         <div>
           {
-              show && <MenuMobile />
+              show && <MenuMobile handleShowMenu={handleShowMenu} />
           }
             <Routes>
                 <Route path="post" element={<MotionRoute element="post" post={ post }/>} />
                 <Route path="newpost" element={<MotionRoute element="newpost"/>} />
-                <Route path="follows" element={<Follows show={show}/>} />
+                <Route path="follows" element={<Follows />} />
+                <Route path="profile" element={<Profile />} />
             </Routes>
         </div>
     </>
