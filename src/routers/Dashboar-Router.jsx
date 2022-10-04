@@ -1,9 +1,10 @@
 import React, { useState } from "react";
 import { Route, Routes } from "react-router-dom";
 import MotionRoute from "../layout/motion-route";
-import { Header } from "../components/header/header";
+import { Header } from "../components/header/Header";
 import { Follows } from "../components/pages/follows/Follows";
 import { MenuMobile } from "../components/menu/Menu-Mobile";
+import { Profile } from "../components/profile/Profile";
 
 export const DashboarRouter = () => {
   const post = {
@@ -26,14 +27,15 @@ export const DashboarRouter = () => {
     <>
       <Header handleShowMenu={handleShowMenu} />
       <div>
-        {show && <MenuMobile />}
+        {show && <MenuMobile handleShowMenu={handleShowMenu} />}
         <Routes>
           <Route
             path="post"
             element={<MotionRoute element="post" post={post} />}
           />
           <Route path="newpost" element={<MotionRoute element="newpost" />} />
-          <Route path="follows" element={<Follows show={show} />} />
+          <Route path="follows" element={<Follows />} />
+          <Route path="profile" element={<Profile />} />
         </Routes>
       </div>
     </>

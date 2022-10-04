@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 import './menu.css';
 
-export const MenuMobile = () => {
+export const MenuMobile = ({handleShowMenu}) => {
 
   return (
     <div className='viewMenu'>
@@ -11,31 +11,37 @@ export const MenuMobile = () => {
             <ul>
                 <li>
                     <i className="fa-solid fa-house"></i>
-                   <Link>
+                   <Link onClick={handleShowMenu}>
                         Home
                    </Link>
                 </li>
                 <li>
                     <i className="fa-solid fa-sheet-plastic"></i>
-                   <Link>
+                   <Link 
+                        onClick={handleShowMenu}
+                        to='/post'>
                         My post
                    </Link> 
                 </li>
                 <li>
                     <i className="fa-regular fa-bell"></i>
-                    <Link>
+                    <Link onClick={handleShowMenu}>
                         Notifications 
                     </Link>
                 </li>
                 <li>
                     <i className="fa-solid fa-star"></i>
-                    <Link>
+                    <Link 
+                        onClick={handleShowMenu}
+                        to='/follows'>
                         Follow
                     </Link>
                 </li>
                 <li>
                     <i className="fa-solid fa-circle-user"></i>
-                    <Link>
+                    <Link 
+                        onClick={handleShowMenu}
+                        to='/profile'>
                         Profile
                     </Link>
                 </li>
