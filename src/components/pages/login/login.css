@@ -11,19 +11,13 @@ h1,
 p {
   color: var(--global-font-color);
 }
-/* class bootstrap */
-
-.login-form {
-  margin: 50px auto;
-  width: 359px;
-}
-.login-form > form {
-  width: 100%;
-  gap: 15px;
+.container-form {
+  width: 25rem;
 }
 
 .form-group {
   margin-bottom: 15px;
+  width: 100%;
 }
 .form-group > label {
   margin-bottom: 15px;
@@ -75,6 +69,7 @@ p {
 /* link direction */
 .content-link {
   display: flex;
+  width: 25rem;
   justify-content: space-between;
 }
 
@@ -91,4 +86,13 @@ p {
 .a-link:hover {
   color: var(--global-link-color);
   text-decoration: underline;
+}
+
+@media screen and (max-width: 768px) {
+  .container-form {
+    width: 80%;
+  }
+  .content-link {
+    width: 80%;
+  }
 }
